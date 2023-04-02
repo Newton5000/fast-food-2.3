@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Bright Orange Background with Black Stripes</title>
+    <style>
+      body {
+		background-color: red;
+		background-color: indigo;
+
+      }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <title>Button Example</title>
+	<style>
+		/* Style for buttons */
+		.button {
+		  background-color: #4CAF50;
+		  border: none;
+		  color: white;
+		  padding: 10px 20px;
+		  text-align: center;
+		  text-decoration: none;
+		  display: block;
+		  font-size: 16px;
+		  margin: 4px 2px;
+		  cursor: pointer;
+        }
+		/* Style for image */  
+		.image {
+		  height: 5cm;
+		  width: 100%;
+		  object-fit: cover;
+		}
+		/* Style for rectangle */
+.rectangle {
+  border: 1px solid black;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+	</style>
+</head>
+<body>
+	
+    <!-- Home button -->
+	<button class="button">Home</button>
+	<!-- About button -->
+	<button class="button" onclick="location.href='about.html'">About</button>
+    <!-- Image -->
+	<img src="41d6b830967e8af43bb5614644ee63a2.jpg" alt="placeholder image" class="image">
+	<div class="container">
+        <!-- Category buttons -->
+        <button class="button" onclick="showCategory('beverages')">Beverages</button>
+        <button class="button" onclick="showCategory('food')">Food</button>
+        <button class="button" onclick="showCategory('cakes')">Cakes</button>
+
+        <!-- Category items rectangle -->
+        <div class="rectangle">
+            <p>Category Items:</p>
+            <ol id="categoryItems">
+                <!-- Default list items -->
+                <li>Coffee</li>
+                <li>Tea</li>
+                <li>Coca-cola</li>
+                <li>Burger</li>
+                <li>Pizza</li>
+                <li>Cheesecake</li>
+            </ol>
+        </div>
+    </div>
+	<script>
+		// Function to show the items of a selected category
+		function showCategory(category) {
+			// Get the list of items element
+			var itemsList = document.getElementById("categoryItems");
+			// Clear the existing list items
+			itemsList.innerHTML = "";
+			// Add new list items based on the selected category
+			switch (category) {
+				case "beverages":
+					itemsList.innerHTML = "<li>Coffee</li><li>Tea</li><li>Coca-cola</li>";
+					break;
+				case "food":
+					itemsList.innerHTML = "<li>Burger</li><li>Pizza</li><li>Hot dog</li>";
+					break;
+				case "cakes":
+					itemsList.innerHTML = "<li>Cheesecake</li><li>Chocolate cake</li><li>Carrot cake</li>";
+					break;
+			}
+		}
+	</script>
+	
+    
+</body>
+</html>
